@@ -41,6 +41,14 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 
+// Stripe Price IDs - these must match what's configured in your Stripe Dashboard
+// TODO: Replace with your actual Stripe Price IDs in production
+const STRIPE_PRICE_IDS: Record<string, string> = {
+  STARTER: process.env.NEXT_PUBLIC_STRIPE_STARTER_PRICE_ID || 'price_starter_monthly',
+  PRO: process.env.NEXT_PUBLIC_STRIPE_PRO_PRICE_ID || 'price_pro_monthly',
+  PREMIUM: process.env.NEXT_PUBLIC_STRIPE_PREMIUM_PRICE_ID || 'price_premium_monthly',
+};
+
 const TIERS = [
   {
     key: 'FREE',
@@ -129,6 +137,36 @@ export default function SettingsPage() {
   };
 
   const currentTier = user?.subscription ?? 'FREE';
+  const [upgradingTier, setUpgradingTier] = useState<string | null>(null);
+  const [portalLoading, setPortalLoading] = useState(false);
+
+  /** Redirect to Stripe Checkout for the selected paid tier */
+  const handleUpgrade = async (tierKey: string) => {
+    const priceId = STRIPE_PRICE_IDS[tierKey];
+    if (!priceId) return;
+
+    setUpgradingTier(tierKey);
+    try {
+      const { url } = await api.createCheckoutSession(priceId);
+      // Redirect to Stripe's hosted checkout page
+      window.location.href = url;
+    } catch (err) {
+      console.error('Failed to create checkout session:', err);
+      setUpgradingTier(null);
+    }
+  };
+
+  /** Open Stripe Customer Portal to manage existing subscription */
+  const handleManageSubscription = async () => {
+    setPortalLoading(true);
+    try {
+      const { url } = await api.createCustomerPortal();
+      window.location.href = url;
+    } catch (err) {
+      console.error('Failed to open customer portal:', err);
+      setPortalLoading(false);
+    }
+  };
 
   return (
     <div className="mx-auto max-w-4xl space-y-6">
@@ -378,22 +416,42 @@ export default function SettingsPage() {
                       </li>
                     ))}
                   </ul>
-                  {!isCurrent && (
+                  {!isCurrent && tier.key !== 'FREE' && tier.key !== 'CORPORATE' && (
                     <Button
                       variant="outline"
                       size="sm"
                       className="w-full"
-                      onClick={() => {
-                        /* Would link to upgrade flow */
-                      }}
+                      disabled={upgradingTier === tier.key}
+                      onClick={() => handleUpgrade(tier.key)}
                     >
-                      {tier.key === 'CORPORATE' ? 'Contact Sales' : 'Upgrade'}
+                      {upgradingTier === tier.key ? (
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      ) : null}
+                      {upgradingTier === tier.key ? 'Redirecting...' : 'Upgrade'}
+                    </Button>
+                  )}
+                  {!isCurrent && tier.key === 'CORPORATE' && (
+                    <Button variant="outline" size="sm" className="w-full" asChild>
+                      <a href="mailto:sales@flowfi.app">Contact Sales</a>
                     </Button>
                   )}
                 </div>
               );
             })}
           </div>
+          {currentTier !== 'FREE' && (
+            <div className="mt-4 text-center">
+              <Button
+                variant="ghost"
+                size="sm"
+                disabled={portalLoading}
+                onClick={handleManageSubscription}
+              >
+                {portalLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                Manage Subscription (billing, cancel, change plan)
+              </Button>
+            </div>
+          )}
         </CardContent>
       </Card>
 

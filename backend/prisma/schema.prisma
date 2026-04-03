@@ -59,10 +59,14 @@ model User {
   avatar           String?
   locale           String           @default("es")
   currency         String           @default("USD")
-  subscriptionTier SubscriptionTier @default(FREE)
-  googleId         String?          @unique
-  createdAt        DateTime         @default(now())
-  updatedAt        DateTime         @updatedAt
+  subscriptionTier     SubscriptionTier @default(FREE)
+  stripeCustomerId     String?          @unique
+  stripeSubscriptionId String?
+  stripePriceId        String?
+  subscriptionStatus   String?          @default("inactive") // active, canceled, past_due
+  googleId             String?          @unique
+  createdAt            DateTime         @default(now())
+  updatedAt            DateTime         @updatedAt
 
   incomes          Income[]
   expenses         Expense[]

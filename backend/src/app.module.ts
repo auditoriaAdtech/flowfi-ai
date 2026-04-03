@@ -11,6 +11,8 @@ import { ScoreModule } from './score/score.module';
 import { MarketplaceModule } from './marketplace/marketplace.module';
 import { GamificationModule } from './gamification/gamification.module';
 import { AnalyticsModule } from './analytics/analytics.module';
+import { PaymentsModule } from './payments/payments.module';
+import { AdminModule } from './admin/admin.module';
 
 @Module({
   imports: [
@@ -26,6 +28,8 @@ import { AnalyticsModule } from './analytics/analytics.module';
     MarketplaceModule,
     GamificationModule,
     AnalyticsModule,
+    PaymentsModule,
+    AdminModule,
   ],
 })
 export class AppModule {}

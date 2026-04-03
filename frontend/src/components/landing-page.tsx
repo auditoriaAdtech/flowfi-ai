@@ -434,15 +434,18 @@ export default function LandingPage() {
                     })}
                   </ul>
 
+                  {/* All pricing CTA buttons route to /register first.
+                      Users need an account before they can subscribe to a paid plan.
+                      After registration, they can upgrade from their Settings page. */}
                   <Link
-                    href="/register"
+                    href={tier === 'free' ? '/register' : `/register?plan=${tier}`}
                     className={`mt-8 block rounded-xl py-3 text-center text-sm font-semibold transition ${
                       isPro
                         ? 'bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-lg shadow-violet-500/25 hover:shadow-xl hover:brightness-110'
                         : 'border border-gray-300 text-gray-700 hover:border-violet-300 hover:bg-violet-50 dark:border-gray-700 dark:text-gray-300 dark:hover:border-violet-700 dark:hover:bg-violet-950/30'
                     }`}
                   >
-                    {t('pricing.getStarted')}
+                    {tier === 'free' ? t('pricing.getStarted') : t('pricing.getStarted')}
                   </Link>
                 </div>
               );

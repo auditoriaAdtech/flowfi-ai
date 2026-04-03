@@ -312,3 +312,99 @@ export function deleteInvestmentPlan(id: string) {
 export function updateProfile(data: Record<string, unknown>) {
   return patch<unknown>('/auth/profile', data);
 }
+
+// --- Payments / Stripe ---
+
+/** Creates a Stripe Checkout session and returns the session URL for redirect. */
+export function createCheckoutSession(priceId: string) {
+  return post<{ sessionId: string; url: string }>('/payments/create-checkout', { priceId });
+}
+
+/** Creates a Stripe Customer Portal session to manage subscription. */
+export function createCustomerPortal() {
+  return post<{ url: string }>('/payments/customer-portal');
+}
+
+/** Gets the current subscription status for the authenticated user. */
+export function getSubscriptionStatus() {
+  return get<{
+    tier: string;
+    status: string;
+    priceId: string | null;
+    subscriptionId: string | null;
+    customerId: string | null;
+  }>('/payments/status');
+}
+
+// --- Admin ---
+
+export function getAdminStats() {
+  return get<{
+    totalUsers: number;
+    activeSubscriptions: number;
+    subscriptionsByTier: Record<string, number>;
+    mrr: number;
+    totalRevenue: number;
+    newUsersToday: number;
+    newUsersWeek: number;
+    newUsersMonth: number;
+    churnRate: number;
+  }>('/admin/stats');
+}
+
+export function getAdminUsers(params?: Record<string, string>) {
+  return get<{
+    users: Array<{
+      id: string;
+      email: string;
+      name: string;
+      avatar: string | null;
+      subscriptionTier: string;
+      locale: string;
+      currency: string;
+      createdAt: string;
+      updatedAt: string;
+      score: number | null;
+      status: string;
+      _count: {
+        incomes: number;
+        expenses: number;
+        debts: number;
+        financialScores: number;
+      };
+    }>;
+    total: number;
+    page: number;
+    limit: number;
+    totalPages: number;
+  }>('/admin/users', params);
+}
+
+export function getAdminUserDetail(userId: string) {
+  return get<unknown>(`/admin/users/${userId}`);
+}
+
+export function updateUserTier(userId: string, tier: string) {
+  return patch<unknown>(`/admin/users/${userId}/tier`, { tier });
+}
+
+export function toggleUserStatus(userId: string, enabled: boolean) {
+  return patch<unknown>(`/admin/users/${userId}/status`, { enabled });
+}
+
+export function getRevenueChart() {
+  return get<Array<{ month: string; revenue: number; users: number }>>('/admin/revenue');
+}
+
+export function getGrowthMetrics() {
+  return get<{
+    months: Array<{ month: string; newUsers: number; totalUsers: number }>;
+    conversionRate: number;
+    totalUsers: number;
+    paidUsers: number;
+  }>('/admin/growth');
+}
+
+export function exportUsers(format: string = 'json') {
+  return get<{ users: unknown[]; total: number; exportedAt: string }>('/admin/export', { format });
+}
