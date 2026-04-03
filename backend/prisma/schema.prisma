@@ -1,0 +1,296 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum SubscriptionTier {
+  FREE
+  BASIC
+  PRO
+}
+
+enum IncomeType {
+  FIXED
+  VARIABLE
+}
+
+enum RecurringInterval {
+  WEEKLY
+  BIWEEKLY
+  MONTHLY
+  QUARTERLY
+  YEARLY
+}
+
+enum DebtStatus {
+  ACTIVE
+  PAID_OFF
+  DEFAULTED
+}
+
+enum DebtStrategy {
+  SNOWBALL
+  AVALANCHE
+}
+
+enum DocumentType {
+  INVOICE
+  RECEIPT
+  STATEMENT
+  OTHER
+}
+
+enum GoalStatus {
+  ACTIVE
+  COMPLETED
+  PAUSED
+  CANCELLED
+}
+
+model User {
+  id               String           @id @default(uuid())
+  email            String           @unique
+  passwordHash     String?
+  name             String
+  avatar           String?
+  locale           String           @default("es")
+  currency         String           @default("USD")
+  subscriptionTier SubscriptionTier @default(FREE)
+  googleId         String?          @unique
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  incomes          Income[]
+  expenses         Expense[]
+  debts            Debt[]
+  documents        Document[]
+  chatMessages     ChatMessage[]
+  financialScores  FinancialScore[]
+  achievements     UserAchievement[]
+  budgets          Budget[]
+  savingsGoals     SavingsGoal[]
+  investmentPlans  InvestmentPlan[]
+  notifications    Notification[]
+}
+
+model Income {
+  id                String             @id @default(uuid())
+  userId            String
+  user              User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  amount            Float
+  currency          String             @default("USD")
+  type              IncomeType
+  category          String
+  description       String?
+  date              DateTime
+  recurring         Boolean            @default(false)
+  recurringInterval RecurringInterval?
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+
+  @@index([userId, date])
+}
+
+model Expense {
+  id                String             @id @default(uuid())
+  userId            String
+  user              User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  amount            Float
+  currency          String             @default("USD")
+  category          String
+  subcategory       String?
+  description       String?
+  date              DateTime
+  isSubscription    Boolean            @default(false)
+  recurring         Boolean            @default(false)
+  recurringInterval RecurringInterval?
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+
+  @@index([userId, date])
+  @@index([userId, category])
+}
+
+model Debt {
+  id              String       @id @default(uuid())
+  userId          String
+  user            User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name            String
+  totalAmount     Float
+  remainingAmount Float
+  interestRate    Float
+  minimumPayment  Float
+  dueDate         DateTime?
+  strategy        DebtStrategy @default(SNOWBALL)
+  status          DebtStatus   @default(ACTIVE)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  payments DebtPayment[]
+
+  @@index([userId, status])
+}
+
+model DebtPayment {
+  id     String   @id @default(uuid())
+  debtId String
+  debt   Debt     @relation(fields: [debtId], references: [id], onDelete: Cascade)
+  amount Float
+  date   DateTime
+  note   String?
+
+  @@index([debtId, date])
+}
+
+model Document {
+  id             String       @id @default(uuid())
+  userId         String
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type           DocumentType @default(OTHER)
+  fileName       String
+  fileUrl        String
+  fileSize       Int
+  mimeType       String
+  ocrData        Json?
+  classification String?
+  uploadedAt     DateTime     @default(now())
+
+  @@index([userId, type])
+}
+
+model ChatMessage {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role      String   // user | assistant
+  content   String
+  metadata  Json?
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+model FinancialScore {
+  id           String   @id @default(uuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  score        Int      // 0-100
+  breakdown    Json     // { savingsRate, debtToIncome, paymentConsistency, spendingDiscipline, budgetAdherence }
+  calculatedAt DateTime @default(now())
+
+  @@index([userId, calculatedAt])
+}
+
+model Achievement {
+  id          String            @id @default(uuid())
+  name        String            @unique
+  nameEs      String
+  description String
+  descriptionEs String
+  icon        String
+  criteria    Json              // { type: 'debt_free_days', value: 30 }
+  users       UserAchievement[]
+}
+
+model UserAchievement {
+  id            String      @id @default(uuid())
+  userId        String
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievementId String
+  achievement   Achievement @relation(fields: [achievementId], references: [id])
+  unlockedAt    DateTime    @default(now())
+
+  @@unique([userId, achievementId])
+}
+
+model Budget {
+  id       String   @id @default(uuid())
+  userId   String
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  category String
+  amount   Float
+  period   String   @default("monthly") // monthly, weekly
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, category])
+}
+
+model MarketplaceOffer {
+  id           String  @id @default(uuid())
+  provider     String
+  type         String  // loan, credit_card, insurance, investment
+  name         String
+  nameEs       String
+  description  String
+  descriptionEs String
+  minScore     Int
+  interestRate Float?
+  url          String
+  logo         String?
+  country      String  @default("ALL")
+  active       Boolean @default(true)
+}
+
+model SavingsGoal {
+  id            String     @id @default(uuid())
+  userId        String
+  user          User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name          String
+  targetAmount  Float
+  currentAmount Float      @default(0)
+  deadline      DateTime?
+  category      String     // emergency, vacation, education, retirement, custom
+  status        GoalStatus @default(ACTIVE)
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  contributions SavingsContribution[]
+
+  @@index([userId, status])
+}
+
+model SavingsContribution {
+  id           String      @id @default(uuid())
+  savingsGoalId String
+  savingsGoal  SavingsGoal @relation(fields: [savingsGoalId], references: [id], onDelete: Cascade)
+  amount       Float
+  date         DateTime    @default(now())
+  note         String?
+}
+
+model InvestmentPlan {
+  id              String   @id @default(uuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name            String
+  riskProfile     String   // conservative, moderate, aggressive
+  monthlyAmount   Float
+  targetReturn    Float?   // expected annual % return
+  horizon         Int      // months
+  strategy        Json     // { allocation: { stocks: 60, bonds: 30, crypto: 10 } }
+  projections     Json?    // AI-generated projections
+  recommendations Json?    // AI recommendations
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([userId])
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      String   // alert, recommendation, achievement, warning
+  title     String
+  message   String
+  read      Boolean  @default(false)
+  metadata  Json?
+  createdAt DateTime @default(now())
+
+  @@index([userId, read, createdAt])
+}

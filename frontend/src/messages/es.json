@@ -1,0 +1,445 @@
+{
+  "common": {
+    "appName": "FlowFi AI",
+    "login": "Iniciar Sesion",
+    "register": "Registrarse",
+    "logout": "Cerrar Sesion",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "loading": "Cargando...",
+    "error": "Ocurrio un error",
+    "success": "Operacion completada exitosamente",
+    "back": "Volver",
+    "next": "Siguiente",
+    "close": "Cerrar",
+    "search": "Buscar",
+    "noData": "No hay datos disponibles",
+    "confirm": "Confirmar",
+    "currencySymbol": "Q",
+    "currencyCode": "GTQ"
+  },
+  "nav": {
+    "dashboard": "Panel",
+    "income": "Ingresos",
+    "expenses": "Gastos",
+    "debts": "Deudas",
+    "documents": "Documentos",
+    "coach": "Coach IA",
+    "score": "Puntaje Financiero",
+    "marketplace": "Marketplace",
+    "savings": "Ahorros",
+    "investments": "Inversiones",
+    "settings": "Configuracion"
+  },
+  "dashboard": {
+    "title": "Panel",
+    "monthlyBalance": "Balance Mensual",
+    "cashFlow": "Flujo de Efectivo",
+    "expensesByCategory": "Gastos por Categoria",
+    "incomeVsExpenses": "Ingresos vs Gastos",
+    "savingsRate": "Tasa de Ahorro",
+    "projectedSavings": "Ahorros Proyectados",
+    "alerts": "Alertas",
+    "welcome": "Bienvenido de vuelta, {name}!",
+    "overview": "Resumen Financiero",
+    "quickActions": "Acciones Rapidas"
+  },
+  "income": {
+    "title": "Ingresos",
+    "addIncome": "Agregar Ingreso",
+    "editIncome": "Editar Ingreso",
+    "fixed": "Fijo",
+    "variable": "Variable",
+    "salary": "Salario",
+    "freelance": "Freelance",
+    "business": "Negocio",
+    "investments": "Inversiones",
+    "other": "Otro",
+    "amount": "Monto",
+    "category": "Categoria",
+    "description": "Descripcion",
+    "date": "Fecha",
+    "recurring": "Recurrente",
+    "interval": "Intervalo",
+    "monthlyTotal": "Total Mensual",
+    "noIncome": "No hay ingresos registrados. Empieza agregando tu primera fuente de ingreso."
+  },
+  "expenses": {
+    "title": "Gastos",
+    "addExpense": "Agregar Gasto",
+    "editExpense": "Editar Gasto",
+    "categories": {
+      "food": "Comida y Restaurantes",
+      "housing": "Vivienda",
+      "transportation": "Transporte",
+      "utilities": "Servicios",
+      "entertainment": "Entretenimiento",
+      "shopping": "Compras",
+      "health": "Salud",
+      "education": "Educacion",
+      "other": "Otro"
+    },
+    "subscriptions": "Suscripciones",
+    "hiddenSubscriptions": "Suscripciones Ocultas",
+    "byCategory": "Por Categoria",
+    "monthlyTotal": "Total Mensual",
+    "noExpenses": "No hay gastos registrados. Empieza a llevar control de tus gastos.",
+    "leaks": "Fugas de Dinero"
+  },
+  "debts": {
+    "title": "Deudas",
+    "addDebt": "Agregar Deuda",
+    "editDebt": "Editar Deuda",
+    "totalDebt": "Deuda Total",
+    "name": "Nombre de la Deuda",
+    "totalAmount": "Monto Total",
+    "remaining": "Saldo Pendiente",
+    "interestRate": "Tasa de Interes",
+    "minimumPayment": "Pago Minimo",
+    "dueDate": "Fecha de Vencimiento",
+    "strategy": "Estrategia de Pago",
+    "snowball": "Bola de Nieve (Menor Primero)",
+    "avalanche": "Avalancha (Mayor Interes Primero)",
+    "paymentPlan": "Plan de Pagos",
+    "addPayment": "Registrar Pago",
+    "noDebts": "No hay deudas registradas. Estas libre de deudas!",
+    "paidOff": "Pagada",
+    "monthsToPayoff": "Meses para Liquidar",
+    "totalInterest": "Interes Total",
+    "payments": "Pagos"
+  },
+  "documents": {
+    "title": "Documentos",
+    "upload": "Subir Documento",
+    "uploadDescription": "Sube facturas, recibos o estados de cuenta para procesamiento automatico.",
+    "type": "Tipo de Documento",
+    "invoice": "Factura",
+    "receipt": "Recibo",
+    "statement": "Estado de Cuenta",
+    "other": "Otro",
+    "ocr": "Procesamiento OCR",
+    "ocrResult": "Resultado OCR",
+    "processing": "Procesando documento...",
+    "noDocuments": "No hay documentos subidos aun.",
+    "fileSize": "Tamano del Archivo",
+    "classification": "Clasificacion"
+  },
+  "coach": {
+    "title": "Coach Financiero IA",
+    "placeholder": "Preguntame lo que quieras sobre tus finanzas...",
+    "send": "Enviar",
+    "thinking": "Pensando...",
+    "suggestions": [
+      "Como puedo reducir mis gastos mensuales?",
+      "Cual es la mejor estrategia para pagar mis deudas?",
+      "Cuanto deberia estar ahorrando cada mes?",
+      "Que opciones de inversion son las mejores para mi?"
+    ],
+    "greeting": "Hola! Soy tu coach financiero con IA. Preguntame lo que quieras sobre tus finanzas y te dare consejos personalizados.",
+    "noMessages": "No hay mensajes aun. Inicia una conversacion!"
+  },
+  "score": {
+    "title": "Puntaje Financiero",
+    "yourScore": "Tu Puntaje",
+    "breakdown": "Desglose del Puntaje",
+    "savingsRate": "Tasa de Ahorro",
+    "debtToIncome": "Relacion Deuda-Ingreso",
+    "paymentConsistency": "Consistencia de Pagos",
+    "spendingDiscipline": "Disciplina de Gasto",
+    "budgetAdherence": "Cumplimiento de Presupuesto",
+    "history": "Historial del Puntaje",
+    "improve": "Como Mejorar",
+    "excellent": "Excelente",
+    "good": "Bueno",
+    "fair": "Regular",
+    "poor": "Bajo",
+    "level": "Nivel {level}"
+  },
+  "marketplace": {
+    "title": "Marketplace",
+    "eligible": "Ofertas Disponibles",
+    "allOffers": "Todas las Ofertas",
+    "loan": "Prestamo",
+    "creditCard": "Tarjeta de Credito",
+    "insurance": "Seguro",
+    "investment": "Inversion",
+    "minScore": "Puntaje Min.",
+    "interestRate": "Tasa de Interes",
+    "apply": "Solicitar",
+    "notEligible": "No Elegible",
+    "provider": "Proveedor",
+    "matchScore": "Compatibilidad"
+  },
+  "savings": {
+    "title": "Metas de Ahorro",
+    "addGoal": "Agregar Meta",
+    "editGoal": "Editar Meta",
+    "goals": "Metas",
+    "emergency": "Fondo de Emergencia",
+    "vacation": "Vacaciones",
+    "education": "Educacion",
+    "retirement": "Retiro",
+    "custom": "Personalizada",
+    "targetAmount": "Monto Objetivo",
+    "currentAmount": "Monto Actual",
+    "deadline": "Fecha Limite",
+    "contribute": "Contribuir",
+    "progress": "Progreso",
+    "completed": "Completada",
+    "noGoals": "No hay metas de ahorro aun. Crea una para empezar a ahorrar!"
+  },
+  "investments": {
+    "title": "Inversiones",
+    "createPlan": "Crear Plan",
+    "riskProfile": "Perfil de Riesgo",
+    "conservative": "Conservador",
+    "moderate": "Moderado",
+    "aggressive": "Agresivo",
+    "monthlyAmount": "Monto Mensual",
+    "horizon": "Horizonte de Tiempo",
+    "projections": "Proyecciones",
+    "recommendations": "Recomendaciones",
+    "allocation": "Distribucion de Activos",
+    "expectedReturn": "Rendimiento Esperado",
+    "noPlans": "No hay planes de inversion aun. Crea uno para empezar!"
+  },
+  "gamification": {
+    "level": "Nivel",
+    "achievements": "Logros",
+    "unlocked": "Desbloqueado",
+    "locked": "Bloqueado",
+    "progress": "Progreso",
+    "beginner": "Principiante",
+    "saver": "Ahorrador",
+    "investor": "Inversionista",
+    "expert": "Experto",
+    "master": "Maestro"
+  },
+  "settings": {
+    "title": "Configuracion",
+    "profile": "Perfil",
+    "language": "Idioma",
+    "currency": "Moneda",
+    "notifications": "Notificaciones",
+    "subscription": "Suscripcion",
+    "theme": "Tema",
+    "darkMode": "Modo Oscuro"
+  },
+  "alerts": {
+    "overspending": "Has excedido tu presupuesto en {category} este mes.",
+    "debtDueSoon": "El pago de {debt} vence en {days} dias.",
+    "goalDeadline": "La fecha limite de tu meta \"{goal}\" se acerca.",
+    "lowBalance": "Tu saldo esta por debajo de {threshold}.",
+    "savingsOpportunity": "Podrias ahorrar {amount} reduciendo tus gastos en {category}.",
+    "subscriptionDetected": "Nuevo cargo recurrente detectado: {name} por {amount}/mes.",
+    "silentPovertyWarning": "Tu patron de gastos muestra senales de inflacion de estilo de vida. Considera revisar tus gastos."
+  },
+  "landing": {
+    "nav": {
+      "features": "Funciones",
+      "pricing": "Precios",
+      "faq": "Preguntas",
+      "login": "Iniciar Sesion",
+      "signup": "Registrarse Gratis"
+    },
+    "hero": {
+      "title": "Tu cerebro financiero con IA",
+      "subtitle": "Toma el control total de tus finanzas con inteligencia artificial. Rastrea ingresos, elimina deudas y construye riqueza — todo en una sola plataforma.",
+      "cta": "Empezar Gratis",
+      "ctaDemo": "Ver Demo",
+      "badge": "Mas de 10,000 usuarios confian en nosotros"
+    },
+    "socialProof": {
+      "title": "Empresas innovadoras confian en nosotros"
+    },
+    "features": {
+      "title": "Todo lo que necesitas para dominar tu dinero",
+      "subtitle": "Herramientas poderosas impulsadas por IA para transformar tu vida financiera",
+      "dashboard": {
+        "title": "Panel Inteligente",
+        "description": "Rastrea ingresos, gastos y patrimonio en tiempo real con visualizaciones hermosas e insights impulsados por IA."
+      },
+      "coach": {
+        "title": "Coach Financiero IA",
+        "description": "Recibe consejos financieros personalizados 24/7. Nuestra IA analiza tus habitos y te da recomendaciones accionables."
+      },
+      "debt": {
+        "title": "Destructor de Deudas",
+        "description": "Elimina deudas mas rapido con estrategias bola de nieve o avalancha. Ve como tu fecha de pago se reduce en tiempo real."
+      },
+      "documents": {
+        "title": "Escaner de Documentos",
+        "description": "Sube recibos, facturas y estados de cuenta. Nuestra tecnologia OCR extrae los datos automaticamente."
+      },
+      "score": {
+        "title": "Puntaje Financiero",
+        "description": "Construye tu puntaje crediticio alternativo basado en tu comportamiento financiero real, no solo en tu historial de prestamos."
+      },
+      "investments": {
+        "title": "Planes de Inversion",
+        "description": "Planifica tu futuro financiero con proyecciones impulsadas por IA y estrategias de inversion personalizadas."
+      }
+    },
+    "howItWorks": {
+      "title": "Como funciona",
+      "subtitle": "Empieza en minutos, no en horas",
+      "step1": {
+        "title": "Registrate en 30 segundos",
+        "description": "Crea tu cuenta gratis solo con tu email. No necesitas tarjeta de credito."
+      },
+      "step2": {
+        "title": "Conecta tus finanzas",
+        "description": "Agrega tus ingresos, gastos y deudas. Sube documentos para procesamiento automatico."
+      },
+      "step3": {
+        "title": "Recibe insights con IA",
+        "description": "Recibe consejos personalizados, rastrea tu progreso y mira como mejora tu salud financiera."
+      }
+    },
+    "pricing": {
+      "title": "Precios simples y transparentes",
+      "subtitle": "Empieza gratis. Mejora cuando estes listo.",
+      "annual": "Anual",
+      "monthly": "Mensual",
+      "annualDiscount": "Ahorra 20%",
+      "perMonth": "/mes",
+      "mostPopular": "Mas Popular",
+      "getStarted": "Comenzar",
+      "contactSales": "Contactar Ventas",
+      "corporate": {
+        "title": "Empresarial",
+        "description": "Para empresas y equipos. Integraciones personalizadas, soporte dedicado y precios por volumen.",
+        "cta": "Contactar Ventas"
+      },
+      "free": {
+        "name": "Gratis",
+        "price": "0",
+        "description": "Pruebalo gratis para siempre",
+        "features": ["Panel basico", "Seguimiento manual de gastos", "Hasta 5 documentos/mes", "Puntaje financiero basico", "Soporte comunitario"]
+      },
+      "starter": {
+        "name": "Inicial",
+        "price": "5",
+        "priceAnnual": "4",
+        "description": "Para personas que empiezan",
+        "features": ["Todo en Gratis", "Coach IA (10 mensajes/dia)", "Documentos ilimitados", "Planificador de deudas", "Soporte por email"]
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "10",
+        "priceAnnual": "8",
+        "description": "Para ahorradores serios",
+        "features": ["Todo en Inicial", "Coach IA ilimitado", "Planificacion de inversiones", "Analitica avanzada", "Soporte prioritario", "Acceso al marketplace"]
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "25",
+        "priceAnnual": "20",
+        "description": "Todo el poder liberado",
+        "features": ["Todo en Pro", "Cuentas familiares (hasta 5)", "Reportes financieros personalizados", "Acceso API", "Gerente de cuenta dedicado", "Onboarding personalizado"]
+      }
+    },
+    "coachPreview": {
+      "title": "Conoce tu Coach Financiero IA",
+      "subtitle": "Recibe consejos instantaneos y personalizados sobre cualquier pregunta financiera",
+      "userMessage": "Puedo pagar una cena de $200 este fin de semana?",
+      "aiResponse": "Segun tu presupuesto, $200 representa el 40% de tu presupuesto restante para comida este mes. Te sugiero mantener la cena bajo $120 esta semana para seguir en camino con tu meta de ahorro. Quieres que te busque buenas opciones de restaurantes dentro de ese rango?"
+    },
+    "testimonials": {
+      "title": "Miles de usuarios nos aman",
+      "subtitle": "Mira lo que dicen nuestros usuarios",
+      "t1": {
+        "quote": "FlowFi AI me ayudo a pagar $15,000 en deudas en solo 18 meses. El coach IA me mantuvo enfocada en cada paso del camino.",
+        "name": "Sarah Mitchell",
+        "role": "Gerente de Marketing"
+      },
+      "t2": {
+        "quote": "El puntaje financiero me abrio puertas que nunca supe que existian. Pase de no tener historial crediticio a que me aprobaran mi primer apartamento.",
+        "name": "Carlos Rivera",
+        "role": "Disenador Freelance"
+      },
+      "t3": {
+        "quote": "He probado todas las apps de presupuesto. FlowFi es la primera que realmente entiende mis patrones de gasto y da consejos utiles.",
+        "name": "Emily Zhang",
+        "role": "Ingeniera de Software"
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "subtitle": "Tienes preguntas? Tenemos respuestas.",
+      "q1": {
+        "question": "FlowFi AI es realmente gratis?",
+        "answer": "Si! Nuestro plan Gratis incluye un panel basico, seguimiento manual de gastos y un puntaje financiero basico. No necesitas tarjeta de credito para registrarte."
+      },
+      "q2": {
+        "question": "Como funciona el Coach IA?",
+        "answer": "Nuestro Coach IA analiza tus datos financieros — ingresos, gastos, deudas y metas — para darte consejos personalizados. Aprende de tus patrones y se vuelve mas inteligente con el tiempo."
+      },
+      "q3": {
+        "question": "Mis datos financieros estan seguros?",
+        "answer": "Absolutamente. Usamos encriptacion de 256 bits de nivel bancario y tus datos nunca se venden a terceros. Cumplimos con SOC 2 Tipo II."
+      },
+      "q4": {
+        "question": "Puedo cancelar mi suscripcion en cualquier momento?",
+        "answer": "Si, puedes cancelar en cualquier momento sin penalidades. Si cancelas un plan de pago, mantendras el acceso hasta el final de tu periodo de facturacion."
+      },
+      "q5": {
+        "question": "Que hace diferente al Puntaje Financiero de un puntaje crediticio?",
+        "answer": "Nuestro Puntaje Financiero mide tu salud financiera general — habitos de ahorro, disciplina de gasto y manejo de deudas — no solo tu historial de prestamos. Es una vision holistica."
+      },
+      "q6": {
+        "question": "FlowFi soporta multiples monedas?",
+        "answer": "Si! FlowFi soporta USD, GTQ, EUR y muchas mas monedas. Puedes configurar tu moneda preferida en ajustes."
+      }
+    },
+    "cta": {
+      "title": "Comienza tu viaje financiero hoy",
+      "subtitle": "Unete a mas de 10,000 usuarios que ya estan tomando el control de su dinero con IA.",
+      "placeholder": "Ingresa tu email",
+      "button": "Empezar Gratis"
+    },
+    "footer": {
+      "description": "Gestion de finanzas personales impulsada por IA para todos.",
+      "product": "Producto",
+      "company": "Empresa",
+      "legal": "Legal",
+      "about": "Sobre Nosotros",
+      "careers": "Empleos",
+      "blog": "Blog",
+      "contact": "Contacto",
+      "privacy": "Politica de Privacidad",
+      "terms": "Terminos de Servicio",
+      "cookies": "Politica de Cookies",
+      "rights": "Todos los derechos reservados."
+    }
+  },
+  "dailyExpense": {
+    "title": "Como gastaste hoy?",
+    "subtitle": "Registra tus gastos hormiga para ahorrar mas",
+    "coffee": "Cafe",
+    "food": "Comida y Snacks",
+    "transportation": "Transporte / Uber",
+    "cashWithdrawal": "Retiro de Efectivo",
+    "smallPurchases": "Compras Pequenas",
+    "entertainment": "Entretenimiento",
+    "digital": "Digital y Apps",
+    "other": "Otro",
+    "amount": "Monto",
+    "description": "Descripcion",
+    "descriptionPlaceholder": "Para que fue?",
+    "cashQuestion": "En que gastaste el efectivo?",
+    "cashPlaceholder": "ej. almuerzo, parqueo, propinas...",
+    "noSpending": "No gaste nada hoy",
+    "todayTotal": "Hoy gastaste",
+    "save": "Guardar Gastos",
+    "remindLater": "Recordar despues",
+    "dontShowToday": "No mostrar hoy",
+    "reminderMessage": "No has registrado tus gastos de hoy. Los gastos hormiga se acumulan!",
+    "trackNow": "Registrar Ahora",
+    "congratsNoSpending": "Excelente! Sin gastos hormiga hoy!",
+    "addItem": "Agregar Gasto",
+    "backToCategories": "Volver a categorias"
+  }
+}

@@ -1,0 +1,445 @@
+{
+  "common": {
+    "appName": "FlowFi AI",
+    "login": "Log In",
+    "register": "Sign Up",
+    "logout": "Log Out",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Operation completed successfully",
+    "back": "Back",
+    "next": "Next",
+    "close": "Close",
+    "search": "Search",
+    "noData": "No data available",
+    "confirm": "Confirm",
+    "currencySymbol": "$",
+    "currencyCode": "USD"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "income": "Income",
+    "expenses": "Expenses",
+    "debts": "Debts",
+    "documents": "Documents",
+    "coach": "AI Coach",
+    "score": "Financial Score",
+    "marketplace": "Marketplace",
+    "savings": "Savings",
+    "investments": "Investments",
+    "settings": "Settings"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "monthlyBalance": "Monthly Balance",
+    "cashFlow": "Cash Flow",
+    "expensesByCategory": "Expenses by Category",
+    "incomeVsExpenses": "Income vs Expenses",
+    "savingsRate": "Savings Rate",
+    "projectedSavings": "Projected Savings",
+    "alerts": "Alerts",
+    "welcome": "Welcome back, {name}!",
+    "overview": "Financial Overview",
+    "quickActions": "Quick Actions"
+  },
+  "income": {
+    "title": "Income",
+    "addIncome": "Add Income",
+    "editIncome": "Edit Income",
+    "fixed": "Fixed",
+    "variable": "Variable",
+    "salary": "Salary",
+    "freelance": "Freelance",
+    "business": "Business",
+    "investments": "Investments",
+    "other": "Other",
+    "amount": "Amount",
+    "category": "Category",
+    "description": "Description",
+    "date": "Date",
+    "recurring": "Recurring",
+    "interval": "Interval",
+    "monthlyTotal": "Monthly Total",
+    "noIncome": "No income recorded yet. Start by adding your first income source."
+  },
+  "expenses": {
+    "title": "Expenses",
+    "addExpense": "Add Expense",
+    "editExpense": "Edit Expense",
+    "categories": {
+      "food": "Food & Dining",
+      "housing": "Housing",
+      "transportation": "Transportation",
+      "utilities": "Utilities",
+      "entertainment": "Entertainment",
+      "shopping": "Shopping",
+      "health": "Health",
+      "education": "Education",
+      "other": "Other"
+    },
+    "subscriptions": "Subscriptions",
+    "hiddenSubscriptions": "Hidden Subscriptions",
+    "byCategory": "By Category",
+    "monthlyTotal": "Monthly Total",
+    "noExpenses": "No expenses recorded yet. Start tracking your spending.",
+    "leaks": "Spending Leaks"
+  },
+  "debts": {
+    "title": "Debts",
+    "addDebt": "Add Debt",
+    "editDebt": "Edit Debt",
+    "totalDebt": "Total Debt",
+    "name": "Debt Name",
+    "totalAmount": "Total Amount",
+    "remaining": "Remaining Balance",
+    "interestRate": "Interest Rate",
+    "minimumPayment": "Minimum Payment",
+    "dueDate": "Due Date",
+    "strategy": "Payoff Strategy",
+    "snowball": "Snowball (Smallest First)",
+    "avalanche": "Avalanche (Highest Interest First)",
+    "paymentPlan": "Payment Plan",
+    "addPayment": "Add Payment",
+    "noDebts": "No debts recorded. You're debt-free!",
+    "paidOff": "Paid Off",
+    "monthsToPayoff": "Months to Payoff",
+    "totalInterest": "Total Interest",
+    "payments": "Payments"
+  },
+  "documents": {
+    "title": "Documents",
+    "upload": "Upload Document",
+    "uploadDescription": "Upload invoices, receipts, or bank statements for automatic processing.",
+    "type": "Document Type",
+    "invoice": "Invoice",
+    "receipt": "Receipt",
+    "statement": "Bank Statement",
+    "other": "Other",
+    "ocr": "OCR Processing",
+    "ocrResult": "OCR Result",
+    "processing": "Processing document...",
+    "noDocuments": "No documents uploaded yet.",
+    "fileSize": "File Size",
+    "classification": "Classification"
+  },
+  "coach": {
+    "title": "AI Financial Coach",
+    "placeholder": "Ask me anything about your finances...",
+    "send": "Send",
+    "thinking": "Thinking...",
+    "suggestions": [
+      "How can I reduce my monthly expenses?",
+      "What's the best strategy to pay off my debts?",
+      "How much should I be saving each month?",
+      "What investment options are right for me?"
+    ],
+    "greeting": "Hi! I'm your AI financial coach. Ask me anything about your finances and I'll provide personalized advice.",
+    "noMessages": "No messages yet. Start a conversation!"
+  },
+  "score": {
+    "title": "Financial Score",
+    "yourScore": "Your Score",
+    "breakdown": "Score Breakdown",
+    "savingsRate": "Savings Rate",
+    "debtToIncome": "Debt-to-Income Ratio",
+    "paymentConsistency": "Payment Consistency",
+    "spendingDiscipline": "Spending Discipline",
+    "budgetAdherence": "Budget Adherence",
+    "history": "Score History",
+    "improve": "How to Improve",
+    "excellent": "Excellent",
+    "good": "Good",
+    "fair": "Fair",
+    "poor": "Poor",
+    "level": "Level {level}"
+  },
+  "marketplace": {
+    "title": "Marketplace",
+    "eligible": "Eligible Offers",
+    "allOffers": "All Offers",
+    "loan": "Loan",
+    "creditCard": "Credit Card",
+    "insurance": "Insurance",
+    "investment": "Investment",
+    "minScore": "Min. Score",
+    "interestRate": "Interest Rate",
+    "apply": "Apply Now",
+    "notEligible": "Not Eligible",
+    "provider": "Provider",
+    "matchScore": "Match Score"
+  },
+  "savings": {
+    "title": "Savings Goals",
+    "addGoal": "Add Goal",
+    "editGoal": "Edit Goal",
+    "goals": "Goals",
+    "emergency": "Emergency Fund",
+    "vacation": "Vacation",
+    "education": "Education",
+    "retirement": "Retirement",
+    "custom": "Custom",
+    "targetAmount": "Target Amount",
+    "currentAmount": "Current Amount",
+    "deadline": "Deadline",
+    "contribute": "Contribute",
+    "progress": "Progress",
+    "completed": "Completed",
+    "noGoals": "No savings goals yet. Create one to start saving!"
+  },
+  "investments": {
+    "title": "Investments",
+    "createPlan": "Create Plan",
+    "riskProfile": "Risk Profile",
+    "conservative": "Conservative",
+    "moderate": "Moderate",
+    "aggressive": "Aggressive",
+    "monthlyAmount": "Monthly Amount",
+    "horizon": "Time Horizon",
+    "projections": "Projections",
+    "recommendations": "Recommendations",
+    "allocation": "Asset Allocation",
+    "expectedReturn": "Expected Return",
+    "noPlans": "No investment plans yet. Create one to get started!"
+  },
+  "gamification": {
+    "level": "Level",
+    "achievements": "Achievements",
+    "unlocked": "Unlocked",
+    "locked": "Locked",
+    "progress": "Progress",
+    "beginner": "Beginner",
+    "saver": "Saver",
+    "investor": "Investor",
+    "expert": "Expert",
+    "master": "Master"
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "language": "Language",
+    "currency": "Currency",
+    "notifications": "Notifications",
+    "subscription": "Subscription",
+    "theme": "Theme",
+    "darkMode": "Dark Mode"
+  },
+  "alerts": {
+    "overspending": "You've exceeded your budget in {category} this month.",
+    "debtDueSoon": "Payment for {debt} is due in {days} days.",
+    "goalDeadline": "Your savings goal \"{goal}\" deadline is approaching.",
+    "lowBalance": "Your balance is below {threshold}.",
+    "savingsOpportunity": "You could save {amount} by reducing spending on {category}.",
+    "subscriptionDetected": "New recurring charge detected: {name} for {amount}/month.",
+    "silentPovertyWarning": "Your spending pattern shows signs of lifestyle inflation. Consider reviewing your expenses."
+  },
+  "landing": {
+    "nav": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "faq": "FAQ",
+      "login": "Log In",
+      "signup": "Sign Up Free"
+    },
+    "hero": {
+      "title": "Your AI Financial Brain",
+      "subtitle": "Take full control of your finances with artificial intelligence. Track income, crush debt, and build wealth — all in one powerful platform.",
+      "cta": "Get Started Free",
+      "ctaDemo": "Watch Demo",
+      "badge": "Trusted by 10,000+ users worldwide"
+    },
+    "socialProof": {
+      "title": "Trusted by forward-thinking companies"
+    },
+    "features": {
+      "title": "Everything you need to master your money",
+      "subtitle": "Powerful tools powered by AI to transform your financial life",
+      "dashboard": {
+        "title": "Smart Dashboard",
+        "description": "Track income, expenses, and net worth in real-time with beautiful visualizations and AI-powered insights."
+      },
+      "coach": {
+        "title": "AI Financial Coach",
+        "description": "Get personalized financial advice 24/7. Our AI analyzes your habits and provides actionable recommendations."
+      },
+      "debt": {
+        "title": "Debt Destroyer",
+        "description": "Eliminate debt faster with snowball or avalanche strategies. See your payoff date shrink in real-time."
+      },
+      "documents": {
+        "title": "Document Scanner",
+        "description": "Upload receipts, invoices, and statements. Our OCR technology extracts data automatically."
+      },
+      "score": {
+        "title": "Financial Score",
+        "description": "Build your alternative credit score based on real financial behavior, not just borrowing history."
+      },
+      "investments": {
+        "title": "Investment Plans",
+        "description": "Plan your financial future with AI-powered projections and personalized investment strategies."
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "subtitle": "Get started in minutes, not hours",
+      "step1": {
+        "title": "Sign up in 30 seconds",
+        "description": "Create your free account with just your email. No credit card required."
+      },
+      "step2": {
+        "title": "Connect your finances",
+        "description": "Add your income, expenses, and debts. Upload documents for automatic processing."
+      },
+      "step3": {
+        "title": "Get AI-powered insights",
+        "description": "Receive personalized advice, track your progress, and watch your financial health improve."
+      }
+    },
+    "pricing": {
+      "title": "Simple, transparent pricing",
+      "subtitle": "Start free. Upgrade when you're ready.",
+      "annual": "Annual",
+      "monthly": "Monthly",
+      "annualDiscount": "Save 20%",
+      "perMonth": "/mo",
+      "mostPopular": "Most Popular",
+      "getStarted": "Get Started",
+      "contactSales": "Contact Sales",
+      "corporate": {
+        "title": "Enterprise",
+        "description": "For companies and teams. Custom integrations, dedicated support, and volume pricing.",
+        "cta": "Contact Sales"
+      },
+      "free": {
+        "name": "Free",
+        "price": "0",
+        "description": "Try it free forever",
+        "features": ["Basic dashboard", "Manual expense tracking", "Up to 5 documents/month", "Basic financial score", "Community support"]
+      },
+      "starter": {
+        "name": "Starter",
+        "price": "5",
+        "priceAnnual": "4",
+        "description": "For individuals getting started",
+        "features": ["Everything in Free", "AI Coach (10 messages/day)", "Unlimited documents", "Debt payoff planner", "Email support"]
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "10",
+        "priceAnnual": "8",
+        "description": "For serious savers",
+        "features": ["Everything in Starter", "Unlimited AI Coach", "Investment planning", "Advanced analytics", "Priority support", "Marketplace access"]
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "25",
+        "priceAnnual": "20",
+        "description": "Full power unleashed",
+        "features": ["Everything in Pro", "Family accounts (up to 5)", "Custom financial reports", "API access", "Dedicated account manager", "White-glove onboarding"]
+      }
+    },
+    "coachPreview": {
+      "title": "Meet your AI Financial Coach",
+      "subtitle": "Get instant, personalized advice on any financial question",
+      "userMessage": "Can I afford a $200 dinner this weekend?",
+      "aiResponse": "Based on your budget, $200 represents 40% of your remaining food budget for this month. I'd suggest keeping dinner under $120 this week to stay on track with your savings goal. Want me to find some great restaurant options within that range?"
+    },
+    "testimonials": {
+      "title": "Loved by thousands",
+      "subtitle": "See what our users are saying",
+      "t1": {
+        "quote": "FlowFi AI helped me pay off $15,000 in debt in just 18 months. The AI coach kept me accountable every step of the way.",
+        "name": "Sarah Mitchell",
+        "role": "Marketing Manager"
+      },
+      "t2": {
+        "quote": "The financial score feature opened doors I never knew existed. I went from no credit history to getting approved for my first apartment.",
+        "name": "Carlos Rivera",
+        "role": "Freelance Designer"
+      },
+      "t3": {
+        "quote": "I've tried every budgeting app out there. FlowFi is the first one that actually understands my spending patterns and gives useful advice.",
+        "name": "Emily Zhang",
+        "role": "Software Engineer"
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "subtitle": "Got questions? We've got answers.",
+      "q1": {
+        "question": "Is FlowFi AI really free?",
+        "answer": "Yes! Our Free plan includes a basic dashboard, manual expense tracking, and a basic financial score. No credit card required to sign up."
+      },
+      "q2": {
+        "question": "How does the AI Coach work?",
+        "answer": "Our AI Coach analyzes your financial data — income, expenses, debts, and goals — to provide personalized advice. It learns from your patterns and gets smarter over time."
+      },
+      "q3": {
+        "question": "Is my financial data secure?",
+        "answer": "Absolutely. We use bank-level 256-bit encryption, and your data is never sold to third parties. We're SOC 2 Type II compliant."
+      },
+      "q4": {
+        "question": "Can I cancel my subscription anytime?",
+        "answer": "Yes, you can cancel at any time with no penalties. If you cancel a paid plan, you'll retain access until the end of your billing period."
+      },
+      "q5": {
+        "question": "What makes the Financial Score different from a credit score?",
+        "answer": "Our Financial Score measures your overall financial health — savings habits, spending discipline, and debt management — not just your borrowing history. It's a holistic view."
+      },
+      "q6": {
+        "question": "Does FlowFi support multiple currencies?",
+        "answer": "Yes! FlowFi supports USD, GTQ, EUR, and many more currencies. You can set your preferred currency in settings."
+      }
+    },
+    "cta": {
+      "title": "Start your financial journey today",
+      "subtitle": "Join 10,000+ users who are already taking control of their money with AI.",
+      "placeholder": "Enter your email",
+      "button": "Get Started Free"
+    },
+    "footer": {
+      "description": "AI-powered personal finance management for everyone.",
+      "product": "Product",
+      "company": "Company",
+      "legal": "Legal",
+      "about": "About Us",
+      "careers": "Careers",
+      "blog": "Blog",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy",
+      "rights": "All rights reserved."
+    }
+  },
+  "dailyExpense": {
+    "title": "How did you spend today?",
+    "subtitle": "Track your ant expenses to save more",
+    "coffee": "Coffee",
+    "food": "Food & Snacks",
+    "transportation": "Transportation",
+    "cashWithdrawal": "Cash Withdrawal",
+    "smallPurchases": "Small Purchases",
+    "entertainment": "Entertainment",
+    "digital": "Digital & Apps",
+    "other": "Other",
+    "amount": "Amount",
+    "description": "Description",
+    "descriptionPlaceholder": "What was it for?",
+    "cashQuestion": "What did you spend the cash on?",
+    "cashPlaceholder": "e.g. lunch, parking, tips...",
+    "noSpending": "I didn't spend anything today",
+    "todayTotal": "Today you spent",
+    "save": "Save Expenses",
+    "remindLater": "Remind me later",
+    "dontShowToday": "Don't show today",
+    "reminderMessage": "You haven't tracked your expenses today. Small daily purchases add up!",
+    "trackNow": "Track Now",
+    "congratsNoSpending": "Great job! No ant expenses today!",
+    "addItem": "Add Expense",
+    "backToCategories": "Back to categories"
+  }
+}
