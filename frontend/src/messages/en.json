@@ -441,5 +441,110 @@
     "congratsNoSpending": "Great job! No ant expenses today!",
     "addItem": "Add Expense",
     "backToCategories": "Back to categories"
+  },
+  "onboarding": {
+    "progress": "Step {current} of {total}",
+    "back": "Back",
+    "next": "Next",
+    "skip": "Skip for now",
+    "saving": "Saving...",
+    "step1": {
+      "title": "Welcome to FlowFi AI!",
+      "subtitle": "Let's set up your financial profile in just a few minutes. It'll be worth it, we promise.",
+      "selectCurrency": "Select your currency",
+      "selectLanguage": "Select your language",
+      "photoOptional": "Add a profile photo (optional)"
+    },
+    "step2": {
+      "title": "How much do you earn?",
+      "subtitle": "Add your income sources so we can help you budget smarter.",
+      "amount": "Amount",
+      "addMore": "Add another income source",
+      "totalMonthly": "Total Monthly Income",
+      "monthly": "Monthly",
+      "biweekly": "Biweekly",
+      "weekly": "Weekly",
+      "categories": {
+        "salary": "Salary / Wages",
+        "freelance": "Freelance",
+        "business": "Business",
+        "investments": "Investments",
+        "rental": "Rental Income",
+        "other": "Other"
+      }
+    },
+    "step3": {
+      "title": "What are your fixed monthly expenses?",
+      "subtitle": "Enter the amounts you pay regularly each month.",
+      "totalExpenses": "Total Fixed Expenses",
+      "remaining": "Remaining After Expenses",
+      "addCustom": "Add custom expense",
+      "customName": "Expense name",
+      "categories": {
+        "rent": "Rent / Mortgage",
+        "electricity": "Electricity",
+        "water": "Water",
+        "internet": "Internet",
+        "phone": "Phone",
+        "insurance": "Insurance",
+        "car_payment": "Car Payment",
+        "subscriptions": "Subscriptions",
+        "loan_payments": "Loan Payments"
+      }
+    },
+    "step4": {
+      "title": "Do you have any debts?",
+      "subtitle": "No judgment here. Let's get a clear picture so we can help you crush them.",
+      "debtName": "Debt name",
+      "totalAmount": "Total amount",
+      "interestRate": "Interest %",
+      "minPayment": "Min. payment",
+      "totalDebt": "Total Debt",
+      "monthlyPayments": "Monthly Payments",
+      "debtFree": "I'm debt free!",
+      "debtFreeCelebration": "Amazing! You're ahead of the game!",
+      "types": {
+        "credit_card": "Credit Card",
+        "student_loan": "Student Loan",
+        "personal_loan": "Personal Loan",
+        "car_loan": "Car Loan",
+        "mortgage": "Mortgage",
+        "medical": "Medical",
+        "other": "Other"
+      }
+    },
+    "step5": {
+      "title": "What are you saving for?",
+      "subtitle": "Pick a goal or create your own. Having a target makes saving easier.",
+      "goalName": "Goal name",
+      "targetAmount": "Target amount",
+      "templates": {
+        "emergency_fund": "Emergency Fund",
+        "vacation": "Vacation",
+        "new_car": "New Car",
+        "education": "Education"
+      }
+    },
+    "step6": {
+      "title": "Have receipts or invoices?",
+      "subtitle": "Upload a document and our AI will read it automatically. You can always do this later.",
+      "dragDrop": "Drag & drop your file here",
+      "or": "or",
+      "browse": "Browse files",
+      "remove": "Remove",
+      "aiExplain": "Our AI automatically extracts amounts, dates, and categories from your receipts and invoices."
+    },
+    "step7": {
+      "title": "You're all set!",
+      "subtitle": "Here's a snapshot of your financial picture.",
+      "monthlyIncome": "Monthly Income",
+      "monthlyExpenses": "Monthly Expenses",
+      "savingsPotential": "Savings Potential",
+      "totalDebt": "Total Debt",
+      "debtFreeLabel": "Debt Free!",
+      "firstGoal": "First Goal",
+      "scoreMessage": "Your Financial Score will be calculated based on your data. Keep tracking to improve it!",
+      "goToDashboard": "Go to Dashboard"
+    }
   }
 }

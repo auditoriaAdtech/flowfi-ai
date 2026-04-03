@@ -5,16 +5,59 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+// Locale hints for Americas currencies to improve Intl.NumberFormat output
+const CURRENCY_LOCALE_MAP: Record<string, string> = {
+  USD: 'en-US',
+  CAD: 'en-CA',
+  MXN: 'es-MX',
+  GTQ: 'es-GT',
+  HNL: 'es-HN',
+  NIO: 'es-NI',
+  CRC: 'es-CR',
+  PAB: 'es-PA',
+  COP: 'es-CO',
+  VES: 'es-VE',
+  PEN: 'es-PE',
+  BOB: 'es-BO',
+  CLP: 'es-CL',
+  ARS: 'es-AR',
+  UYU: 'es-UY',
+  PYG: 'es-PY',
+  BRL: 'pt-BR',
+  DOP: 'es-DO',
+  CUP: 'es-CU',
+  JMD: 'en-JM',
+  TTD: 'en-TT',
+  BZD: 'en-BZ',
+  SRD: 'nl-SR',
+  GYD: 'en-GY',
+  HTG: 'fr-HT',
+  BSD: 'en-BS',
+  BBD: 'en-BB',
+  XCD: 'en-AG',
+  AWG: 'nl-AW',
+  ANG: 'nl-CW',
+  KYD: 'en-KY',
+  BMD: 'en-BM',
+  FKP: 'en-FK',
+};
+
+// Currencies that typically display without decimal places
+const ZERO_DECIMAL_CURRENCIES = new Set(['CLP', 'PYG', 'COP']);
+
 export function formatCurrency(
   amount: number,
   currency: string = 'USD',
-  locale: string = 'en-US'
+  locale?: string
 ): string {
-  return new Intl.NumberFormat(locale, {
+  const resolvedLocale = locale || CURRENCY_LOCALE_MAP[currency] || 'en-US';
+  const isZeroDecimal = ZERO_DECIMAL_CURRENCIES.has(currency);
+
+  return new Intl.NumberFormat(resolvedLocale, {
     style: 'currency',
     currency,
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
+    minimumFractionDigits: isZeroDecimal ? 0 : 2,
+    maximumFractionDigits: isZeroDecimal ? 0 : 2,
   }).format(amount);
 }
 

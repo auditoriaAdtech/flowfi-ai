@@ -441,5 +441,110 @@
     "congratsNoSpending": "Excelente! Sin gastos hormiga hoy!",
     "addItem": "Agregar Gasto",
     "backToCategories": "Volver a categorias"
+  },
+  "onboarding": {
+    "progress": "Paso {current} de {total}",
+    "back": "Atras",
+    "next": "Siguiente",
+    "skip": "Omitir por ahora",
+    "saving": "Guardando...",
+    "step1": {
+      "title": "Bienvenido a FlowFi AI!",
+      "subtitle": "Configuremos tu perfil financiero en solo unos minutos. Valdra la pena, te lo prometemos.",
+      "selectCurrency": "Selecciona tu moneda",
+      "selectLanguage": "Selecciona tu idioma",
+      "photoOptional": "Agrega una foto de perfil (opcional)"
+    },
+    "step2": {
+      "title": "Cuanto ganas?",
+      "subtitle": "Agrega tus fuentes de ingreso para ayudarte a presupuestar mejor.",
+      "amount": "Monto",
+      "addMore": "Agregar otra fuente de ingreso",
+      "totalMonthly": "Ingreso Mensual Total",
+      "monthly": "Mensual",
+      "biweekly": "Quincenal",
+      "weekly": "Semanal",
+      "categories": {
+        "salary": "Salario / Sueldo",
+        "freelance": "Freelance",
+        "business": "Negocio",
+        "investments": "Inversiones",
+        "rental": "Ingresos por Alquiler",
+        "other": "Otro"
+      }
+    },
+    "step3": {
+      "title": "Cuales son tus gastos fijos mensuales?",
+      "subtitle": "Ingresa los montos que pagas regularmente cada mes.",
+      "totalExpenses": "Total Gastos Fijos",
+      "remaining": "Restante Despues de Gastos",
+      "addCustom": "Agregar gasto personalizado",
+      "customName": "Nombre del gasto",
+      "categories": {
+        "rent": "Alquiler / Hipoteca",
+        "electricity": "Electricidad",
+        "water": "Agua",
+        "internet": "Internet",
+        "phone": "Telefono",
+        "insurance": "Seguro",
+        "car_payment": "Pago del Auto",
+        "subscriptions": "Suscripciones",
+        "loan_payments": "Pagos de Prestamos"
+      }
+    },
+    "step4": {
+      "title": "Tienes alguna deuda?",
+      "subtitle": "Sin juicios aqui. Tengamos una imagen clara para ayudarte a eliminarlas.",
+      "debtName": "Nombre de la deuda",
+      "totalAmount": "Monto total",
+      "interestRate": "Interes %",
+      "minPayment": "Pago min.",
+      "totalDebt": "Deuda Total",
+      "monthlyPayments": "Pagos Mensuales",
+      "debtFree": "Estoy libre de deudas!",
+      "debtFreeCelebration": "Increible! Vas un paso adelante!",
+      "types": {
+        "credit_card": "Tarjeta de Credito",
+        "student_loan": "Prestamo Estudiantil",
+        "personal_loan": "Prestamo Personal",
+        "car_loan": "Prestamo de Auto",
+        "mortgage": "Hipoteca",
+        "medical": "Medico",
+        "other": "Otro"
+      }
+    },
+    "step5": {
+      "title": "Para que estas ahorrando?",
+      "subtitle": "Elige una meta o crea la tuya. Tener un objetivo hace que ahorrar sea mas facil.",
+      "goalName": "Nombre de la meta",
+      "targetAmount": "Monto objetivo",
+      "templates": {
+        "emergency_fund": "Fondo de Emergencia",
+        "vacation": "Vacaciones",
+        "new_car": "Auto Nuevo",
+        "education": "Educacion"
+      }
+    },
+    "step6": {
+      "title": "Tienes recibos o facturas?",
+      "subtitle": "Sube un documento y nuestra IA lo leera automaticamente. Siempre puedes hacer esto despues.",
+      "dragDrop": "Arrastra y suelta tu archivo aqui",
+      "or": "o",
+      "browse": "Buscar archivos",
+      "remove": "Eliminar",
+      "aiExplain": "Nuestra IA extrae automaticamente montos, fechas y categorias de tus recibos y facturas."
+    },
+    "step7": {
+      "title": "Todo listo!",
+      "subtitle": "Aqui tienes un resumen de tu situacion financiera.",
+      "monthlyIncome": "Ingreso Mensual",
+      "monthlyExpenses": "Gastos Mensuales",
+      "savingsPotential": "Potencial de Ahorro",
+      "totalDebt": "Deuda Total",
+      "debtFreeLabel": "Libre de Deudas!",
+      "firstGoal": "Primera Meta",
+      "scoreMessage": "Tu Puntaje Financiero se calculara con base en tus datos. Sigue registrando para mejorarlo!",
+      "goToDashboard": "Ir al Panel"
+    }
   }
 }

@@ -192,10 +192,39 @@ export default function SettingsPage() {
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="USD">USD ($)</SelectItem>
-                  <SelectItem value="GTQ">GTQ (Q)</SelectItem>
-                  <SelectItem value="EUR">EUR</SelectItem>
-                  <SelectItem value="MXN">MXN</SelectItem>
+                  <SelectItem value="USD">USD - US Dollar ($)</SelectItem>
+                  <SelectItem value="CAD">CAD - Canadian Dollar (CA$)</SelectItem>
+                  <SelectItem value="MXN">MXN - Mexican Peso (MX$)</SelectItem>
+                  <SelectItem value="GTQ">GTQ - Guatemalan Quetzal (Q)</SelectItem>
+                  <SelectItem value="HNL">HNL - Honduran Lempira (L)</SelectItem>
+                  <SelectItem value="NIO">NIO - Nicaraguan Cordoba (C$)</SelectItem>
+                  <SelectItem value="CRC">CRC - Costa Rican Colon ({'\u20a1'})</SelectItem>
+                  <SelectItem value="PAB">PAB - Panamanian Balboa (B/.)</SelectItem>
+                  <SelectItem value="COP">COP - Colombian Peso (COL$)</SelectItem>
+                  <SelectItem value="VES">VES - Venezuelan Bolivar (Bs.)</SelectItem>
+                  <SelectItem value="PEN">PEN - Peruvian Sol (S/)</SelectItem>
+                  <SelectItem value="BOB">BOB - Bolivian Boliviano (Bs)</SelectItem>
+                  <SelectItem value="CLP">CLP - Chilean Peso (CL$)</SelectItem>
+                  <SelectItem value="ARS">ARS - Argentine Peso (AR$)</SelectItem>
+                  <SelectItem value="UYU">UYU - Uruguayan Peso ($U)</SelectItem>
+                  <SelectItem value="PYG">PYG - Paraguayan Guarani ({'\u20b2'})</SelectItem>
+                  <SelectItem value="BRL">BRL - Brazilian Real (R$)</SelectItem>
+                  <SelectItem value="DOP">DOP - Dominican Peso (RD$)</SelectItem>
+                  <SelectItem value="CUP">CUP - Cuban Peso ({'\u20b1'})</SelectItem>
+                  <SelectItem value="JMD">JMD - Jamaican Dollar (J$)</SelectItem>
+                  <SelectItem value="TTD">TTD - Trinidad & Tobago Dollar (TT$)</SelectItem>
+                  <SelectItem value="BZD">BZD - Belize Dollar (BZ$)</SelectItem>
+                  <SelectItem value="SRD">SRD - Surinamese Dollar (SRD)</SelectItem>
+                  <SelectItem value="GYD">GYD - Guyanese Dollar (G$)</SelectItem>
+                  <SelectItem value="HTG">HTG - Haitian Gourde (G)</SelectItem>
+                  <SelectItem value="BSD">BSD - Bahamian Dollar (B$)</SelectItem>
+                  <SelectItem value="BBD">BBD - Barbadian Dollar (BBD$)</SelectItem>
+                  <SelectItem value="XCD">XCD - East Caribbean Dollar (EC$)</SelectItem>
+                  <SelectItem value="AWG">AWG - Aruban Florin (Afl.)</SelectItem>
+                  <SelectItem value="ANG">ANG - Netherlands Antillean Guilder (NAf.)</SelectItem>
+                  <SelectItem value="KYD">KYD - Cayman Islands Dollar (CI$)</SelectItem>
+                  <SelectItem value="BMD">BMD - Bermudian Dollar (BD$)</SelectItem>
+                  <SelectItem value="FKP">FKP - Falkland Islands Pound (FK{'\u00a3'})</SelectItem>
                 </SelectContent>
               </Select>
             </div>
